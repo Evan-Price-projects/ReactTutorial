@@ -1,0 +1,92 @@
+@media (min-width: 700px){
+.top-style {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.wider{
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  padding: 1%;
+}
+.main-pad{
+  padding: 0 20% 0 5%;
+  margin: 10px;
+}
+
+.one{
+  flex: 1;
+  padding: 3px;
+}
+
+
+}
+@media (max-width: 700px){
+  .btn.btn-primary{
+    font-size: 70%;
+  }
+  .main-pad{
+    padding: 0 5% 0 5%;
+    margin: 10px;
+  }
+  
+
+  .dropdown-toggle.btn.btn-primary{
+    font-size: 70%;
+  }
+  .wider{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    padding: 3%;
+  }
+}
+
+.jumbo{
+  background-image: url("./img/mtn.jpg");
+  background-size: cover;
+}
+
+.card-padding{
+  background-color: #246BDB;
+  padding: 5%;
+  border-radius: 2%;
+  margin: 5%;
+  border:2px solid black;
+  display: flexbox;
+}
+
+.top-link{
+  margin-top: unset;
+  margin-bottom: unset;
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 20%;
+  list-style-type: none;
+}
+.give-space{
+  display: inline;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+@import "~bootstrap/scss/bootstrap";
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
