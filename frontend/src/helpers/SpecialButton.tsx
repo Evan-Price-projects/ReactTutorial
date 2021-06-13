@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function SpecialButton(props: { ddInfo: any[]; linkInfo: any[], title: string }) {
     var values = props.ddInfo.map(function (value, i) {
         return (
-            <Link style={{ textDecoration: 'none', color: 'inherit' }} to={props.linkInfo[i]}>
+            <Link key={i} style={{ textDecoration: 'none', color: 'inherit' }} to={props.linkInfo[i]}>
                 <Dropdown.Item as='div' key={i}>
                     {value}
                 </Dropdown.Item>

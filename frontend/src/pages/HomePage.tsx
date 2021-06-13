@@ -5,11 +5,12 @@ import articles from '../img/articles';
 const HomePage = (props: { match: { params: { id: string } } }) => {
     let { params } = props.match;
     console.log('par', params, props)
-    let card = articles.filter(ar => ar.id === Number(params.id));
+    const card = articles.filter(ar => ar.id === Number(params.id));
+    console.log('card', card)
     if (card.length>0) {
         let matcher =                
         card.map((indCard, key)=>(
-            <CardMaker key={indCard.id}
+            <CardMaker key={indCard.info}
             title={indCard.title}
             subTitle={indCard.subTitle}
             content={indCard.content}
