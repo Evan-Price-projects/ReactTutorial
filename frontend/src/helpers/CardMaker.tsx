@@ -1,12 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import { Card, Button } from 'react-bootstrap'
 import "../App.scss";
 import React from 'react';
-import { convertToObject } from 'typescript';
 
 function CardMaker(props: {
-    title: string; subTitle: string, id: number, content: string, group: number
+    title: string; subTitle: string, id: number, content: string, group: number, setArticleInfo: React.Dispatch<React.SetStateAction<{
+        content: string;
+        id: number;
+        title: string;
+        subTitle: string;
+        group: number;
+    }[]>>
 }) {
 
     const [title, setTitleInfo] = useState(props.title);
@@ -14,7 +19,7 @@ function CardMaker(props: {
 
 
     const addComment = async () => {
-        const result = await fetch(`/api/articles/${props.id}/update-title`,
+        await fetch(`/api/articles/${props.id}/update-title`,
             {
                 method: 'post', body: JSON.stringify({ title }),
                 headers: {
@@ -23,6 +28,7 @@ function CardMaker(props: {
             }
             )
             setChangeInfo(false);
+
         }
 
     const titleShow = () => {

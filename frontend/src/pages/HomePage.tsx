@@ -23,6 +23,7 @@ const HomePage = (props: { match: { params: { id: string } } }) => {
                     subTitle={indCard.subTitle}
                     content={indCard.content}
                     group={indCard.group}
+                    setArticleInfo={setArticleInfo}
                     id={indCard.id}
 
                 />
@@ -40,6 +41,7 @@ const HomePage = (props: { match: { params: { id: string } } }) => {
                     subTitle="Welcome to my website"
                     content="This website was created to have fun with react"
                     group={-11}
+                    setArticleInfo={setArticleInfo}
                     id={-1}
                 />
             </div>

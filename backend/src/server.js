@@ -34,7 +34,7 @@ app.post('/api/articles/:id/update-title', async (req, res) => {
     console.log('title',  title)
     withDB(async (db) => {
         const art = req.params.id;
-        const article = await db.collection('articles').findOne({ group: Number(art) })
+        const article = await db.collection('articles').findOne({ id: Number(art) })
     
         await db.collection('articles').updateOne({
             id: Number(art)
@@ -43,7 +43,7 @@ app.post('/api/articles/:id/update-title', async (req, res) => {
                 title: title
             }
         });
-        const updatedArticleInfo = await db.collection('articles').findOne({ group: Number(art) })
+        const updatedArticleInfo = await db.collection('articles').findOne({ id: Number(art) })
         console.log(updatedArticleInfo)
         res.status(200).json(updatedArticleInfo)
     },res)
