@@ -14,19 +14,25 @@ class TopBar extends React.Component {
                     <img src={img} className="wider" alt="evan" />
                     <ul className='top-link'>
                         <li className="give-space">
-                            <Button key="exp" style={{ background: '#f2edd7', color: '#393232', outline: '#f2edd7', border: '#f2edd7' }}>
-                                <Link style={{textDecoration: 'none', color: 'inherit'}} to="/3">Experience</Link>
-                            </Button>
+                            <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/3">
+                                <Button key="exp" style={{ background: '#f2edd7', color: '#393232', outline: '#f2edd7', border: '#f2edd7' }}>
+                                    Experience
+                                </Button>
+                            </Link>
                         </li>
                         <li className="give-space">
-                            <Button key="edu" style={{ background: '#f2edd7', color: '#393232', outline: '#f2edd7', border: '#f2edd7' }}>
-                                <Link style={{textDecoration: 'none', color: 'inherit'}} to="/2">Education</Link>
-                            </Button>
+                            <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/2">
+                                <Button key="edu" style={{ background: '#f2edd7', color: '#393232', outline: '#f2edd7', border: '#f2edd7' }}>
+                                    Education
+                                </Button>
+                            </Link>
                         </li>
                         <li className="give-space">
-                            <Button key="edu" style={{ background: '#f2edd7', color: '#393232', outline: '#f2edd7', border: '#f2edd7' }}>
-                                <Link style={{textDecoration: 'none', color: 'inherit'}} to="/0">Projects</Link>
-                            </Button>
+                            <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/0">
+                                <Button key="edu" style={{ background: '#f2edd7', color: '#393232', outline: '#f2edd7', border: '#f2edd7' }}>
+                                    Projects
+                                </Button>
+                            </Link>
                         </li>
                         <li className="give-space">
                             <SpecialButton key="tools" title="Tools/Skills" ddInfo={['Tools', 'Skills']} linkInfo={['/1', '/4']} />

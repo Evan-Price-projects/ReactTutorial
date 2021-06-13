@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 function SpecialButton(props: { ddInfo: any[]; linkInfo: any[], title: string }) {
     var values = props.ddInfo.map(function (value, i) {
         return (
-            <Dropdown.Item as='div' key={i}>
-                <Link style={{ textDecoration: 'none', color: 'inherit' }} to={props.linkInfo[i]}>{value}</Link>
-            </Dropdown.Item>
+            <Link style={{ textDecoration: 'none', color: 'inherit' }} to={props.linkInfo[i]}>
+                <Dropdown.Item as='div' key={i}>
+                    {value}
+                </Dropdown.Item>
+            </Link >
         );
     });
     return (
