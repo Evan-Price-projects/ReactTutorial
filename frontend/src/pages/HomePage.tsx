@@ -6,7 +6,6 @@ const HomePage = (props: { match: { params: { id: string } } }) => {
     let { params } = props.match;
     console.log('par', params, props)
     let card = articles.filter(ar => ar.id === Number(params.id));
-    console.log(card);
     if (card.length>0) {
         let matcher =                
         card.map((indCard, key)=>(
