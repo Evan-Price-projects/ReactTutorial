@@ -5,15 +5,20 @@ import articles from '../img/articles';
 const HomePage = (props: { match: { params: { id: string } } }) => {
     let { params } = props.match;
     console.log('par', params, props)
-    let card = articles.find(ar => ar.id === Number(params.id))
-    if (card) {
+    let card = articles.filter(ar => ar.id === Number(params.id));
+    console.log(card);
+    if (card.length>0) {
+        let matcher =                
+        card.map((indCard, key)=>(
+            <CardMaker key={indCard.id}
+            title={indCard.title}
+            subTitle={indCard.subTitle}
+            content={indCard.content}
+        />
+        )  )
         return (
             <div className="card-padding">
-                <CardMaker key={card.id}
-                    title={card.title}
-                    subTitle={card.subTitle}
-                    content={card.content}
-                />
+                {matcher}
             </div>
         )
     } else if( params.id === undefined) {

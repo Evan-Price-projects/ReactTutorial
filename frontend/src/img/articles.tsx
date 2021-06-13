@@ -23,5 +23,29 @@ const articles = [
     subTitle: "Feb 2021 - PRESENT",
     content: "Main code contributor to Angular 11 TypeScript code base in the company. Using the RXJS library and MongoDB. Implementing Jira Tickets tied to Zeplin Screens. Contribute to the Rust code base via creating data models and implementing small changes. Largest contribution was building a basic web socket. Able to debug and work with CI/CD with Kubernetes and Docker tools seamlessly. To date, have contributed over 17,000 usable lines of code to the Angular Code base."
 },
+{
+    id: 4,
+    title: "Programming Languages",
+    subTitle: "",
+    content: "TypeScript, Java, Python 2 and 3, Rust, C, R,  Julia, HTML, HTML.erb, HAML, CSS, SCSS"
+},
+{
+    id: 4,
+    title: "Frameworks",
+    subTitle: "",
+    content: "Angular, Actix, Rails, React"
+},
+{
+    id: 4,
+    title: "Databases",
+    subTitle: "",
+    content: "MongoDB, PostgreSQL, SQLite"
+},
+{
+    id: 4,
+    title: "Testing",
+    subTitle: "",
+    content: "Jest, Jasmine, Karma, Protractor, RSpec, Cucumber, Capybara, JUnit"
+},
 ];
 export default articles;

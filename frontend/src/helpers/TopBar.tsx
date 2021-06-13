@@ -29,7 +29,7 @@ class TopBar extends React.Component {
                             </Button>
                         </li>
                         <li className="give-space">
-                            <SpecialButton key="tools" title="Tools/Skills" ddInfo={['Tools', 'Skills']} linkInfo={['/1', '/skills']} />
+                            <SpecialButton key="tools" title="Tools/Skills" ddInfo={['Tools', 'Skills']} linkInfo={['/1', '/4']} />
                         </li>
                     </ul>
                 </div>
