@@ -4,13 +4,11 @@ import articles from '../img/articles';
 
 const HomePage = (props: { match: { params: { id: string } } }) => {
     let { params } = props.match;
-    console.log('par', params, props)
-    const card = articles.filter(ar => ar.id === Number(params.id));
-    console.log('card', card)
+    const card = articles.filter(ar => ar.group === Number(params.id));
     if (card.length>0) {
         let matcher =                
         card.map((indCard, key)=>(
-            <CardMaker key={indCard.info}
+            <CardMaker key={indCard.group}
             title={indCard.title}
             subTitle={indCard.subTitle}
             content={indCard.content}
